@@ -58,7 +58,7 @@ include ('template/header.php');
 </script>
 <div class='row'>
 	<div class='col-md-12'>
-		<div class='col-md-8 col-md-offset-2'>
+		<div class='col-md-10 col-md-offset-1'>
 			<div style='display:inline-block; width:100%; min-height:750px; background:#fff; padding:30px;'>
 				<h4 style='margin:0;'>ยินดีต้อนรับ</h4>
 				<div style='color:#000;'>

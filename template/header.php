@@ -38,7 +38,7 @@
 	<div class='container-fluid'>
 		<div class='row'>
 			<div id='sectorHeader' class='col-md-12'>
-				<div class='col-md-8 col-md-offset-2'>
+				<div class='col-md-10 col-md-offset-1'>
 					<div style='display:table; border-spacing:0px; padding:0px; margin:0px;'>
 						<div style='display:table-row;'>
 							<div style='display:table-cell; margin-bottom:0;'><img src='media/images/logo.png' style='width:90px;'></div>
@@ -48,7 +48,7 @@
 				</div>
 			</div>
 			<div class='col-md-12' style='background:#2F2E60;'>
-				<div class='col-md-8 col-md-offset-2'>
+				<div class='col-md-10 col-md-offset-1'>
 					<ul id='menu' class="nav navbar-nav navbar-left">
             			<li><a href="home.php">หน้าแรก</a></li>
             			<li><a href="contract.php?q=list">ข้อมูลสัญญา</a></li>
