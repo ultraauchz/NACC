@@ -74,7 +74,7 @@
 	            	<input type="text" name='username' value="" placeholder="Username" class="form-control" style='background:none; color:#fff;' autofocus>
 	            	<input type="password" value="" placeholder="Password" class="form-control" style='background:none; color:#fff; margin-top:10px;'>
 	          	</div>
-		    	<a href="contract.php" id='btnSignin' class="btn btn-block btn-lg btn-inverse">Signin</a>
+		    	<a href="home.php" id='btnSignin' class="btn btn-block btn-lg btn-inverse">Signin</a>
 
 		    	<div style="padding:20px 0;" class='text-left'>
 		    		<a href='#ForgotPassword' class='small' style='color:#aaa;'>Forgot Password</a> | <a href='register.php' class='small' style='color:#aaa;'>Register</a>
