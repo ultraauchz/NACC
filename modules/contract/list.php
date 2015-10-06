@@ -1,95 +1,117 @@
-<?php 
-	function db_to_date($data = false) {
-		if(!$data) return false;
-
-		$data = strtotime($data);
-		$rs = 'วันที่ '.date('d/m/', $data).(date('Y', $data)+543).' เวลา '.date('H:i', $data);
-		return $rs;
-	}
-?>
-		<div class='row'>
-			<div class='col-md-12'>
-				<div class='col-md-8 col-md-offset-2'>
-					<div style='display:inline-block; width:100%; min-height:750px; background:#fff; padding:30px;'>
-						<h4 style='margin:0;'>ข้อมูลสัญญา</h4>
-						<div style='color:#aaa;'>เจ้าหน้าที่ดูแลระบบ</div>
-						<hr style='margin:20px 0; margin-top:5px;'>
-						<div style='padding:20px; padding-top:10px; background:#eee; margin:10px 0; border:solid 1px #aaa; margin-bottom:25px;'>
-							<div style='font-weight:bold;'>ค้นหา</div>
-							<div class="div_index_search">เลขที่สัญญา : <input type='text' placeholder='เลขที่สัญญา' class='form-control' style="display:inline-block; width:250px;"></div>
-							<div class="div_index_search">เลขประจาตัวผู้เสียภาษี : <input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block; width:300px;"></div>
-							<div class="div_index_search">ชื่อผู้ประกอบการ : <input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block; width:350px;"></div>
-							<div class="div_index_search">
-								ตั้งแต่วันที่ทำสัญญา :
-								<div class='input-group datetimepicker col-sm-2' id="div_date_of_issue">
-							      <input type="input" class="form-con form-control" id="date_of_issue" name="date_of_issue" />
+<div class='row'>
+	<div class='col-md-12'>
+		<div class='col-md-10 col-md-offset-1'>
+			<div style='display:inline-block; width:100%; min-height:750px; background:#fff; padding:30px;'>
+				<h4 style='margin:0;'>ข้อมูลสัญญา</h4>
+				<div style='color:#aaa;'>เจ้าหน้าที่ดูแลระบบ</div>
+				<hr style='margin:20px 0; margin-top:5px;'>
+				<div style='padding:20px; padding-top:10px; background:#eee; margin:10px 0; border:solid 1px #aaa; margin-bottom:25px;'>
+					<div style='font-weight:bold;'>ค้นหา</div>
+					<form class="form-horizontal" action="#" method="post">
+						<div class="col-sm-12">
+							<div class="col-sm-2">เลขที่สัญญา : </div>
+							<div class="col-sm-2">
+								<input type='text' placeholder='เลขที่สัญญา' class='form-control' style="display:inline-block;">
+							</div>
+						</div>
+						<div class="div_index_search col-sm-12">
+							<div class="col-sm-2">เลขประจาตัวผู้เสียภาษี : </div> 
+							<div class="col-sm-3">
+								<input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block; width:300px;">
+							</div>
+						</div>
+						<div class="div_index_search col-sm-12">
+							<div class="col-sm-2">ชื่อผู้ประกอบการ : </div>
+							<div class="col-sm-4">
+								<input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block;">
+							</div>
+						</div>
+						<div class="div_index_search col-sm-12">
+							<div class="col-sm-2">ตั้งแต่วันที่ทำสัญญา :</div>
+							<div class="col-sm-2">
+								<div class='input-group' id="div_date_of_issue">
+							      <input type="input" class="form-con form-control datepicker" id="datepicker_s" name="date_start" />
 							      <span class="input-group-addon">
 			                        <span class="glyphicon glyphicon-calendar"></span>
 			                      </span>
 			                    </div>
-							</div>
-
-							<div class="div_btn_search">
-								<a href='#Search' class='btn btn-inverse' style='padding:6px; margin-bottom:5px;'><i class=""></i>ค้นหา</a>
-							</div>
+		                    </div>
+		                    <div class="col-sm-2">ถึงวันที่ทำสัญญา :</div>
+		                    <div class="col-sm-2">
+								<div class='input-group' id="div_date_of_issue">
+							      <input type="input" class="form-con form-control datepicker" id="datepicker_e" name="date_end" />
+							      <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                      </span>
+			                    </div>
+		                    </div>
 						</div>
-						
-						<div class='tableLayout list'>
-							<div class='header'>
-								<div class="text-center" style="width:50px;">#</div>
-								<div style='width:200px;'>วันที่ร้องเรียน</div>
-								<div>เรื่องร้องเรียน</div>
-								<div style='width:120px;'>สถานะ</div>
-								<div>การปรับปรุงข้อมูล</div>
-								<div style='width:160px;'>
-									<?php 
-										if(@$_GET['p'] != 'admin') {
-											echo "<a href='pComplain.php' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'><span style='font-size:20px;'>เขียนคำร้องเรียน</span></a>";
-										}
-									?>
-									
-								</div>
-							</div>
 
-
-							<?php 
-								$dataList = array(
-									array('2015-09-10 22:49:12', 'เรื่องร้องเรียน 4', '1', '2015-09-10 22:49:12', 'นาย ประชาชน ', 'ทำรายการยื่นคำร้อง "เรื่องร้องเรียน 4"', 4),
-									array('2015-08-24 19:57:28', 'เรื่องร้องเรียน 3', '2', '2015-09-26 10:19:54', 'จนท. ศูนย์ดำรงธรรม', 'ตั้งคณะกรรมการสอบสวน', 3),
-									array('2015-07-12 09:23:34', 'เรื่องร้องเรียน 2', '3', '2015-08-25 13:22:59', 'จนท. ศูนย์ดำรงธรรม', 'สิ้นสุดกระบวนการสอบสวน', 2),
-									array('2015-06-01 22:24:20', 'เรื่องร้องเรียน 1', '1', '2015-06-01 22:24:20', 'นาย ประชาชน ', 'ทำรายการยื่นคำร้อง "เรื่องร้องเรียน 1"', 1),
-								);
-
-								$statusText = array('', 'ยื่นคำร้อง', 'กำลังดำเนินการ', 'สิ้นสุดการดำเนินการ');
-								$statusClass = array('', 'warning', 'primary', 'success');
-
-								for($i=0; $i<5; $i++) {
-									// echo rand(24,30);
-									// echo '<br>';
-								}
-
-								foreach($dataList as $item) {
-									echo '<div>';
-										echo '<div class="text-center">'.((empty($no))?$no = 1:++$no).'</div>';
-										echo '<div style="font-size:20px;">'.db_to_date($item[0]).'</div>';
-										echo '<div>'.$item[1].'</div>';
-										echo '<div><span class="label label-'.$statusClass[$item[2]].'" style="display:inline-block; min-width:110px; padding:3px 10px; padding-top:7px;">'.$statusText[$item[2]].'</span></div>';
-										echo '<div style="font-size:20px;">';
-											echo '<div style="padding:0px 0px;">'.db_to_date($item[3]).'</div>';
-											echo '<div style="padding:0px 0px;"><span style="font-weight:bold;">โดย:</span> '.$item[4].'</div>';
-											echo '<div><span style="font-weight:bold;">รายละเอียด: </span>'.$item[5].'</div>';
-										echo '</div>';
-										echo '<div>';
-											echo '<a href="pComplain.php?p='.@$_GET['p'].'&id='.$item[6].'" class="btn btn-sm" style="background:#4A89DC; color:#fff;">รายละเอียด</a>';
-										echo '</div>';
-									echo '</div>';
-								}
-							?>
-									
+						<div class="div_btn_search">
+							<button type="button" class='btn btn-inverse'>ค้นหา</button>
 						</div>
-						
-					</div>
+					</form>
 				</div>
+				
+				<div class='tableLayout list'>
+					<div class='header'>
+						<div class="text-center" style="width:50px;">ลำดับ</div>
+						<div style='width:200px;'>เลขที่สัญญา</div>
+						<div>เลขที่คุมสัญญา</div>
+						<div>เลขประจาตัวผู้เสียภาษี</div>
+						<div>ชื่อคู่สัญญา</div>
+						<div>วันที่ทาสัญญา</div>
+						<div>มูลค่าสัญญา</div>
+						<div style='width:160px;'>
+							<a href='pComplain.php' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
+								<span style='font-size:20px;'>เพิ่ม</span>
+							</a>
+						</div>
+					</div>
+
+
+					<?php 
+						$dataList = array(
+							array('2/2557', 'N555000023', '1100701061554', 'ชื่อคู่สัญญา4 นามสมมุติ', '1/10/2557', '2,000,000,000.00', 4),
+							array('1/2557', 'N555000022', '1100705648690', 'ชื่อคู่สัญญา3 นามสมมุติ', '15/05/2557', '5,000,000.00', 3),
+							array('2/2556', 'N554000023', '1100705001221', 'ชื่อคู่สัญญา2 นามสมมุติ', '25/02/2556', '6,580,100.00', 2),
+							array('1/2556', 'N554000022', '1055801061554', 'ชื่อคู่สัญญา1 นามสมมุติ', '30/01/2256 ', '50,000.00', 1),
+						);
+
+						foreach($dataList as $item) {
+							echo '<div>';
+								echo '<div class="text-center">'.((empty($no))?$no = 1:++$no).'</div>';
+								echo '<div>'.$item[0].'</div>';
+								echo '<div>'.$item[1].'</div>';
+								echo '<div>'.$item[2].'</div>';
+								echo '<div>'.$item[3].'</div>';
+								echo '<div>'.$item[4].'</div>';
+								echo '<div>'.$item[5].'</div>';
+								echo '<div>';
+									echo '<a href="contract.php?p=view&id='.$item[6].'" class="btn btn-sm btn-blue">ดูรายละเอียด</a>';
+									echo '<a href="contract.php?p=edit&id='.$item[6].'" class="btn btn-sm btn-info">แก้ไข</a>';
+								echo '</div>';
+							echo '</div>';
+						}
+					?>
+							
+				</div>
+				
 			</div>
 		</div>
-		<br>
+	</div>
+</div>
+<br>
+<script language='javascript'>
+	$(function(){
+		$('[name=date_start]').on('change', function(){
+			date_start = $('[name=date_start]').val();
+			datepicker_($('[name=date_end]'), $('[name=date_start]').val());
+		});
+		
+		$('[name=date_end]').on('change', function(){
+			date_end = $('[name=date_end]').val();
+			datepicker_($('[name=date_start]'), $('[name=date_start]').val(), $('[name=date_end]').val());
+		});
+	});
+</script>
