@@ -40,3 +40,66 @@
 .text-red {
 	color:red;
 }
+
+
+.pagination a {
+    display: inline-block;
+    margin-right: -3px;
+    word-spacing: normal;
+    vertical-align: middle;
+    margin: 0;
+    color: #fff;
+    word-spacing: -.5px;
+    background: #d6dbdf;
+    border-radius: 6px;
+
+    min-width: 41px;
+    min-height: 41px;
+    padding: 12px 10px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-left: 2px solid #e4e7ea;
+    outline: none;
+    -webkit-transition: .25s ease-out;
+    transition: .25s ease-out;
+}
+
+.pagination span.current {
+	display: inline-block;
+    color: #fff;
+    background-color: #1abc9c;
+    border-radius: 6px;
+
+    min-width: 41px;
+    min-height: 41px;
+    padding: 12px 10px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-left: 2px solid #34B299;
+    outline: none;
+    cursor: not-allowed;
+}
+
+.pagination span.disabled {
+	display: inline-block;
+    color: #B4B4B4;
+    background-color: rgba(214, 219, 223, 0.37);
+    border-radius: 6px;
+
+    min-width: 41px;
+    min-height: 41px;
+    padding: 12px 10px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-left: 2px solid #e4e7ea;
+    cursor: not-allowed;
+}
+
+.pagination a:hover {
+	color:#34495e;
+	background-color: rgba(39, 168, 142, 0.52);
+	border-left: 2px solid rgba(4, 98, 79, 0.3);
+}
