@@ -49,6 +49,7 @@
 			<div class='col-md-12' style='background:#2F2E60;'>
 				<div class='col-md-8 col-md-offset-2'>
 					<ul id='menu' class="nav navbar-nav navbar-left">
+            			<li><a href="home.php">หน้าแรก</a></li>
             			<li><a href="contract.php?q=list">ข้อมูลสัญญา</a></li>
             			<li class="dropdown">
             				<a href="#" class="dropdown-toggle" data-toggle="dropdown">รายงาน <b class="caret"></b></a>
