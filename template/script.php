@@ -3,7 +3,7 @@
 	<link rel="shortcut icon" href="media/images/logo.png" /> 
 
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="media/js/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="media/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
 	<link href="media/css/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!-- Optional theme -->
 	
-
+    
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="media/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 

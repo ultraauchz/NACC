@@ -1,91 +1,98 @@
-<?php 
-	include('template/header.php'); 
-		
-
-	function db_to_date($data = false) {
-		if(!$data) return false;
-
-		$data = strtotime($data);
-		$rs = 'วันที่ '.date('d/m/', $data).(date('Y', $data)+543).' เวลา '.date('H:i', $data);
-		return $rs;
-	}
+<?php
+include ('template/header.php');
 ?>
-		<div class='row'>
-			<div class='col-md-12'>
-				<div class='col-md-8 col-md-offset-2'>
-					<div style='display:inline-block; width:100%; min-height:750px; background:#fff; padding:30px;'>
-						<h4 style='margin:0;'>ข้อมูลสัญญา</h4>
-						<div style='color:#aaa;'>เจ้าหน้าที่ดูแลระบบ</div>
-						<hr style='margin:20px 0; margin-top:5px;'>
-						<div style='padding:20px; padding-top:10px; background:#eee; margin:10px 0; border:solid 1px #aaa; margin-bottom:25px;'>
-							<div style='font-weight:bold;'>ค้นหา</div>
-							<div>เลขที่สัญญา : <input type='text' placeholder='เลขที่สัญญา' class='form-control' style="display:inline-block; width:250px;"></div>
-							<div>เลขประจาตัวผู้เสียภาษี : <input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block; width:300px;"></div>
-							<div>ชื่อผู้ประกอบการ : <input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block; width:350px;"></div>
+<script src="media/Highcharts/js/highcharts.js"></script>
+<script src="media/Highcharts/js/modules/exporting.js"></script>
+<script type="text/javascript">
+	$(function() {
 
-							<div class="div_btn_search">
-								<a href='#Search' class='btn btn-inverse' style='padding:6px; margin-bottom:5px;'><i class=""></i>ค้นหา</a>
-							</div>
-						</div>
-						
-						<div class='tableLayout list'>
-							<div class='header'>
-								<div class="text-center" style="width:50px;">#</div>
-								<div style='width:200px;'>วันที่ร้องเรียน</div>
-								<div>เรื่องร้องเรียน</div>
-								<div style='width:120px;'>สถานะ</div>
-								<div>การปรับปรุงข้อมูล</div>
-								<div style='width:160px;'>
-									<?php 
-										if(@$_GET['p'] != 'admin') {
-											echo "<a href='pComplain.php' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'><span style='font-size:20px;'>เขียนคำร้องเรียน</span></a>";
-										}
-									?>
-									
-								</div>
-							</div>
+		// Radialize the colors
+		Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function(color) {
+			return {
+				radialGradient : {
+					cx : 0.5,
+					cy : 0.3,
+					r : 0.7
+				},
+				stops : [[0, color], [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+				]
+			};
+		});
 
+		// Build the chart
+		$('#contract-chart').highcharts({
+			chart : {
+				plotBackgroundColor : null,
+				plotBorderWidth : null,
+				plotShadow : false
+			},
+			title : {
+				text : 'จำนวนข้อมูลคู่สัญญาที่มีอยู่ในระบบ ณ ปัจจุบัน'
+			},
+			tooltip : {
+				pointFormat : '{series.name}: <b>{point.percentage}%</b>',
+				percentageDecimals : 1
+			},
+			plotOptions : {
+				pie : {
+					allowPointSelect : true,
+					cursor : 'pointer',
+					dataLabels : {
+						enabled : true,
+						color : '#000000',
+						connectorColor : '#000000',
+						formatter : function() {
+							return '<b>' + this.point.name + '</b>: ' + this.percentage + ' % ';
+						}
+					}
+				}
+			},
+			series : [{
+				type : 'pie',
+				name : 'แบ่งตามสถานะคู่สัญญา',
+				data : [['ปกติ', 900], ['ไม่ส่งแบบ บช.1 เกิน 100 วัน', 20], ['ไม่ส่งแบบ บช.1 เกิน 120 วัน', 50], ['ไม่ส่งแบบ บช.1 เกิน 150 วัน (ยังไม่ติด Black List)', 10], ['ไม่ส่งแบบ บช.1 เกิน 150 วัน (ติด Black List)', 20]]
+			}]
+		});
+	});
 
-							<?php 
-								$dataList = array(
-									array('2015-09-10 22:49:12', 'เรื่องร้องเรียน 4', '1', '2015-09-10 22:49:12', 'นาย ประชาชน ', 'ทำรายการยื่นคำร้อง "เรื่องร้องเรียน 4"', 4),
-									array('2015-08-24 19:57:28', 'เรื่องร้องเรียน 3', '2', '2015-09-26 10:19:54', 'จนท. ศูนย์ดำรงธรรม', 'ตั้งคณะกรรมการสอบสวน', 3),
-									array('2015-07-12 09:23:34', 'เรื่องร้องเรียน 2', '3', '2015-08-25 13:22:59', 'จนท. ศูนย์ดำรงธรรม', 'สิ้นสุดกระบวนการสอบสวน', 2),
-									array('2015-06-01 22:24:20', 'เรื่องร้องเรียน 1', '1', '2015-06-01 22:24:20', 'นาย ประชาชน ', 'ทำรายการยื่นคำร้อง "เรื่องร้องเรียน 1"', 1),
-								);
-
-								$statusText = array('', 'ยื่นคำร้อง', 'กำลังดำเนินการ', 'สิ้นสุดการดำเนินการ');
-								$statusClass = array('', 'warning', 'primary', 'success');
-
-								for($i=0; $i<5; $i++) {
-									// echo rand(24,30);
-									// echo '<br>';
-								}
-
-								foreach($dataList as $item) {
-									echo '<div>';
-										echo '<div class="text-center">'.((empty($no))?$no = 1:++$no).'</div>';
-										echo '<div style="font-size:20px;">'.db_to_date($item[0]).'</div>';
-										echo '<div>'.$item[1].'</div>';
-										echo '<div><span class="label label-'.$statusClass[$item[2]].'" style="display:inline-block; min-width:110px; padding:3px 10px; padding-top:7px;">'.$statusText[$item[2]].'</span></div>';
-										echo '<div style="font-size:20px;">';
-											echo '<div style="padding:0px 0px;">'.db_to_date($item[3]).'</div>';
-											echo '<div style="padding:0px 0px;"><span style="font-weight:bold;">โดย:</span> '.$item[4].'</div>';
-											echo '<div><span style="font-weight:bold;">รายละเอียด: </span>'.$item[5].'</div>';
-										echo '</div>';
-										echo '<div>';
-											echo '<a href="pComplain.php?p='.@$_GET['p'].'&id='.$item[6].'" class="btn btn-sm" style="background:#4A89DC; color:#fff;">รายละเอียด</a>';
-										echo '</div>';
-									echo '</div>';
-								}
-							?>
-									
-						</div>
-						
+</script>
+<div class='row'>
+	<div class='col-md-12'>
+		<div class='col-md-8 col-md-offset-2'>
+			<div style='display:inline-block; width:100%; min-height:750px; background:#fff; padding:30px;'>
+				<h4 style='margin:0;'>ยินดีต้อนรับ</h4>
+				<div style='color:#000;'>
+					นายทดสอบ รักชาติ  (เจ้าหน้าที่ดูแลระบบ)
+				</div>
+				<hr style='margin:20px 0; margin-top:5px;'>
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active">
+						<a href="#home" role="tab" data-toggle="tab"> <icon class="fa fa-home"></icon> ข้อมูลคู่สัญญา </a>
+					</li>
+					<li>
+						<a href="#profile" role="tab" data-toggle="tab"> <i class="fa fa-user"></i> ข้อมูลราคากลาง </a>
+					</li>
+					<li>
+						<a href="#messages" role="tab" data-toggle="tab"> <i class="fa fa-envelope"></i> ข้อมูลการลงทะเบียนขอใช้บริการ </a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade active in" id="home">
+						<?php include "inc_page/home/tab1.php"?>
+					</div>
+					<div class="tab-pane fade" id="profile">
+						<h2>Profile Content Goes Here</h2>
+						<img src="http://lorempixel.com/400/400/cats/2" alt="Cats"/>
+					</div>
+					<div class="tab-pane fade" id="messages">
+                        <?php include "inc_page/home/tab3.php";?>
 					</div>
 				</div>
 			</div>
 		</div>
-		<br>
-		
-<?php include('template/footer.php'); ?>
+	</div>
+</div>
+<br>
+<?php
+include ('template/footer.php');
+?>

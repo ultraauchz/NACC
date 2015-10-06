@@ -22,7 +22,8 @@
 		}*/
 	</style>
 	<?php 
-		include('script.php'); 
+		include('script.php');
+         include('function.inc.php'); 
 		$getValue = '';
 		if(!empty($_GET)) {
 		foreach($_GET as $key => $item) {
