@@ -26,11 +26,10 @@
     <link href="media/Flat-UI-master/docs/assets/css/demo.css" rel="stylesheet">
 
     <!-- include bootstrap-datepicker -->
-    <!-- https://eonasdan.github.io/bootstrap-datetimepicker -->
-    <script type="text/javascript" src="media/js/bootstrap-datetimepicker/build/js/moment.js"></script>
-    <script type="text/javascript" src="media/js/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-    <link rel="stylesheet" href="media/js/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
-
+	<link rel="stylesheet" type="text/css" href="media/js/bootstrap-datepicker/css/datepicker.css" />
+	<script type="text/javascript" src="media/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="media/js/bootstrap-datepicker/js/bootstrap-datepicker-thai.js"></script>
+	<script type="text/javascript" src="media/js/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" charset="UTF-8"></script>
 
 	<style type="text/css">	
 		@font-face {
@@ -121,14 +120,28 @@
 	</style>
 
 	<script type="text/javascript">
-		$('.datetimepicker').datetimepicker({
-                format: 'DD/MM/YYYY',
-                showTodayButton: true,
-                showClear:true,
-                showClose:true,
-                useCurrent:false,
-                ignoreReadonly:true,
-                locale: 'th'
-          });
-          $('.datetimepicker').find("input").attr('readonly', 'readonly');
+		function datepicker_(obj, start_date) {
+			obj.datepicker("remove");
+			if(!start_date) {
+				obj.datepicker({language: "th-th",autoclose: true,clearBtn:true,todayHighlight:true,format:'dd/mm/yyyy'});
+			} else {
+				obj.datepicker({startDate:date_start, language: "th-th",autoclose: true,clearBtn:true,todayHighlight:true,format:'dd/mm/yyyy'});
+				
+				//set Default date (start);
+				tmp = start_date.split('/');
+				date_start = tmp[2]+tmp[1]+tmp[0];
+				
+				tmp = obj.val().split('/');
+				date_end = tmp[2]+tmp[1]+tmp[0];
+				if(date_start>date_end) {
+					obj.val(start_date);
+				}	
+			}
+			obj.attr("readonly", "readonly");
+		}
+
+		$(function(){
+			// Bootstrap Datepicker
+			datepicker_($('.datepicker'));
+		});
 	</script>
