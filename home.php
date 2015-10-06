@@ -78,14 +78,14 @@ include ('template/header.php');
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane fade active in" id="home">
-						<?php include "inc_page/home/tab1.php"?>
+						<?php include "modules/home/tab1.php"?>
 					</div>
 					<div class="tab-pane fade" id="profile">
 						<h2>Profile Content Goes Here</h2>
 						<img src="http://lorempixel.com/400/400/cats/2" alt="Cats"/>
 					</div>
 					<div class="tab-pane fade" id="messages">
-                        <?php include "inc_page/home/tab3.php";?>
+                        <?php include "modules/home/tab3.php";?>
 					</div>
 				</div>
 			</div>
