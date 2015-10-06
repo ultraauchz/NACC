@@ -32,3 +32,11 @@
 	background: #163C6D;
     color: #fff;
 }
+
+.control-label, .checkbox-inline {
+	font-size: 22px;
+}
+
+.text-red {
+	color:red;
+}
