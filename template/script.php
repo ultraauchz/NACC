@@ -31,6 +31,10 @@
 	<script type="text/javascript" src="media/js/bootstrap-datepicker/js/bootstrap-datepicker-thai.js"></script>
 	<script type="text/javascript" src="media/js/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" charset="UTF-8"></script>
 
+	<!-- Color box loading -->
+	<link rel="stylesheet" href="media/js/colorbox/colorbox.css" />
+	<script src='media/js/colorbox/jquery.colorbox-min.js'></script>
+
 	<style type="text/css">	
 		@font-face {
 			font-family:THSarabunNew;
@@ -143,5 +147,7 @@
 		$(function(){
 			// Bootstrap Datepicker
 			datepicker_($('.datepicker'));
+
+			$(".modal_fade").colorbox({width:"80%", height:"80%", inline:true});
 		});
 	</script>
