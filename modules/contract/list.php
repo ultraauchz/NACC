@@ -17,7 +17,7 @@
 						<div class="div_index_search col-sm-12">
 							<div class="col-sm-2">เลขประจาตัวผู้เสียภาษี : </div> 
 							<div class="col-sm-3">
-								<input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block; width:300px;">
+								<input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block;">
 							</div>
 						</div>
 						<div class="div_index_search col-sm-12">
@@ -53,6 +53,8 @@
 					</form>
 				</div>
 				
+				<?php include('template/pagination.php'); ?>
+
 				<div class='tableLayout list'>
 					<div class='header'>
 						<div class="text-center" style="width:50px;">ลำดับ</div>
@@ -76,6 +78,12 @@
 							array('1/2557', 'N555000022', '1100705648690', 'ชื่อคู่สัญญา3 นามสมมุติ', '15/05/2557', '5,000,000.00', 3),
 							array('2/2556', 'N554000023', '1100705001221', 'ชื่อคู่สัญญา2 นามสมมุติ', '25/02/2556', '6,580,100.00', 2),
 							array('1/2556', 'N554000022', '1055801061554', 'ชื่อคู่สัญญา1 นามสมมุติ', '30/01/2256 ', '50,000.00', 1),
+							array('', '', '', '', '', '', 10),
+							array('', '', '', '', '', '', 9),
+							array('', '', '', '', '', '', 8),
+							array('', '', '', '', '', '', 7),
+							array('', '', '', '', '', '', 6),
+							array('', '', '', '', '', '', 5)
 						);
 
 						foreach($dataList as $item) {
@@ -97,6 +105,8 @@
 							
 				</div>
 				
+				<?php include('template/pagination.php'); ?>
+
 			</div>
 		</div>
 	</div>
