@@ -66,9 +66,9 @@
 								echo '<div>'.$item[2].'</div>';
 								echo '<div>'.$item[3].'</div>';
 								echo '<div class="text-center">';
-									echo '<a href="contractparty.php?p=view&id='.$item[4].'" class="btn btn-sm btn-view"></a>';
-									echo '<a href="contractparty.php?p=edit&id='.$item[4].'" class="btn btn-sm btn-edit"></a>';
-									echo '<a href="#" class="btn btn-sm btn-delete"></a>';
+									echo '<a href="contractparty.php?p=view&id='.$item[4].'" class="btn btn-sm btn-view" title="ดูรายละเอียด"></a>';
+									echo '<a href="contractparty.php?p=edit&id='.$item[4].'" class="btn btn-sm btn-edit" title="แก้ไข"></a>';
+									echo '<a href="#" class="btn btn-sm btn-delete" title="ลบ"></a>';
 								echo '</div>';
 							echo '</div>';
 						}

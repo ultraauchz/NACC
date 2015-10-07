@@ -149,5 +149,11 @@
 			datepicker_($('.datepicker'));
 
 			$(".modal_fade").colorbox({width:"80%", height:"80%", inline:true});
+
+			$(".btn-delete").on('click', function(){
+				if(!confirm('กรุณายืนยันการลบข้อมูล')) {
+					return false;
+				}
+			})
 		});
 	</script>
