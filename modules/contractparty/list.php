@@ -29,51 +29,53 @@
 				
 				<?php include('template/pagination.php'); ?>
 
-				<div class='tableLayout list'>
-					<div class='header'>
-						<div class="text-center" style="width:50px;">ลำดับ</div>
-						<div style="width:160px">เลขประจำตัวผู้เสียภาษี/<br />เลขประจำตัวประชาชน</div>
-						<div style="width:260px">ชื่อคู่สัญญา</div>
-						<div>ที่อยู่</div>
-						<div style="width:160px">เบอร์โทร</div>
-						<div style='width:160px;' class="text-center">
-							<a href='contractparty.php?p=view' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
-								<span style='font-size:20px;'>เพิ่ม</span>
-							</a>
+				<div class="table-responsive">
+					<div class='tableLayout list'>
+						<div class='header'>
+							<div class="text-center" style="width:50px;">ลำดับ</div>
+							<div style="width:160px">เลขประจำตัวผู้เสียภาษี/<br />เลขประจำตัวประชาชน</div>
+							<div style="width:260px; white-space: nowrap;">ชื่อคู่สัญญา</div>
+							<div>ที่อยู่</div>
+							<div style="width:160px">เบอร์โทร</div>
+							<div style='width:160px;' class="text-center">
+								<a href='contractparty.php?p=view' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
+									<span style='font-size:20px;'>เพิ่ม</span>
+								</a>
+							</div>
 						</div>
-					</div>
 
 
-					<?php 
-						$dataList = array(
-										array('1100701061554', 'ชื่อคู่สัญญา4 นามสมมุติ', 'กทม.', '-', 4),
-										array('1100705648690', 'ชื่อคู่สัญญา3 นามสมมุติ', 'กทม.', '026569999', 3),
-										array('1100705001221', 'ชื่อคู่สัญญา2 นามสมมุติ', 'นนทบุรี', '028564492', 2),
-										array('1055801061554', 'ชื่อคู่สัญญา1 นามสมมุติ', 'ปทุมธานี ', '025556666', 1),
-										array('', '', '', '', 10),
-										array('', '', '', '', 9),
-										array('', '', '', '', 8),
-										array('', '', '', '', 7),
-										array('', '', '', '', 6),
-										array('', '', '', '', 5),
-									);
+						<?php 
+							$dataList = array(
+											array('1100701061554', 'ชื่อคู่สัญญา4 นามสมมุติ', 'กทม.', '-', 4),
+											array('1100705648690', 'ชื่อคู่สัญญา3 นามสมมุติ', 'กทม.', '026569999', 3),
+											array('1100705001221', 'ชื่อคู่สัญญา2 นามสมมุติ', 'นนทบุรี', '028564492', 2),
+											array('1055801061554', 'ชื่อคู่สัญญา1 นามสมมุติ', 'ปทุมธานี ', '025556666', 1),
+											array('', '', '', '', 10),
+											array('', '', '', '', 9),
+											array('', '', '', '', 8),
+											array('', '', '', '', 7),
+											array('', '', '', '', 6),
+											array('', '', '', '', 5),
+										);
 
-						foreach($dataList as $item) {
-							echo '<div>';
-								echo '<div class="text-center">'.((empty($no))?$no = 1:++$no).'</div>';
-								echo '<div>'.$item[0].'</div>';
-								echo '<div>'.$item[1].'</div>';
-								echo '<div>'.$item[2].'</div>';
-								echo '<div>'.$item[3].'</div>';
-								echo '<div class="text-center">';
-									echo '<a href="contractparty.php?p=view&id='.$item[4].'" class="btn btn-sm btn-view" title="ดูรายละเอียด"></a>';
-									echo '<a href="contractparty.php?p=edit&id='.$item[4].'" class="btn btn-sm btn-edit" title="แก้ไข"></a>';
-									echo '<a href="#" class="btn btn-sm btn-delete" title="ลบ"></a>';
+							foreach($dataList as $item) {
+								echo '<div>';
+									echo '<div class="text-center">'.((empty($no))?$no = 1:++$no).'</div>';
+									echo '<div>'.$item[0].'</div>';
+									echo '<div style="white-space: nowrap;">'.$item[1].'</div>';
+									echo '<div>'.$item[2].'</div>';
+									echo '<div>'.$item[3].'</div>';
+									echo '<div class="text-center">';
+										echo '<a href="contractparty.php?p=view&id='.$item[4].'" class="btn btn-sm btn-view" title="ดูรายละเอียด"></a>';
+										echo '<a href="contractparty.php?p=edit&id='.$item[4].'" class="btn btn-sm btn-edit" title="แก้ไข"></a>';
+										echo '<a href="#" class="btn btn-sm btn-delete" title="ลบ"></a>';
+									echo '</div>';
 								echo '</div>';
-							echo '</div>';
-						}
-					?>
-							
+							}
+						?>
+								
+					</div>
 				</div>
 
 				<?php include('template/pagination.php'); ?>
