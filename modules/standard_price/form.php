@@ -2,7 +2,7 @@
 	<div class='col-md-12'>
 		<div class='col-md-10 col-md-offset-1'>
 			<div style='display:inline-block; width:100%; min-height:750px; background:#fff; padding:30px;'>
-				<h4 style='margin:0;'>บันทึกข้อมูลรายละเอียดสัญญา</h4>
+				<h4 style='margin:0;'>ข้อมูลราคากลาง </h4>
 				<div style='color:#aaa;'>เจ้าหน้าที่ดูแลระบบ</div>
 				<hr style='margin:20px 0; margin-top:5px;'>
 				<div class="row">
