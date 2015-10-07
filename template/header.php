@@ -53,6 +53,7 @@
             			<li><a href="home.php">หน้าแรก</a></li>
             			<li><a href="member.php?q=list">ข้อมูลการสมัครขอใช้บริการ</a></li>
             			<li><a href="plan.php?q=list">ข้อมูลแผนประจำปี</a></li>
+            			<li><a href="standard_price.php">ข้อมูล ราคากลาง</a></li>
             			<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ข้อมูลสัญญา <b class="caret"></b></a>
                             <span class="dropdown-arrow"></span>
@@ -61,8 +62,7 @@
                                 <li><a href="contract.php?q=list">ข้อมูลสัญญา</a></li>
                             </ul>
                         </li>                             
-                        <li><a href="blacklist.php?q=list">ข้อมูลตรวจสอบบัญชีรายรับ - รายจ่าย</a></li>
-                        <li><a href="standard_price">ข้อมูล ราคากลาง</a></li>          			
+                        <li><a href="blacklist.php?q=list">ข้อมูลตรวจสอบบัญชีรายรับ - รายจ่าย</a></li>                                  		
             			<li class="dropdown">
             				<a href="#" class="dropdown-toggle" data-toggle="dropdown">รายงาน <b class="caret"></b></a>
             				<span class="dropdown-arrow"></span>

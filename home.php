@@ -81,8 +81,7 @@ include ('template/header.php');
 						<?php include "modules/home/tab1.php"?>
 					</div>
 					<div class="tab-pane fade" id="profile">
-						<h2>Profile Content Goes Here</h2>
-						<img src="http://lorempixel.com/400/400/cats/2" alt="Cats"/>
+						<?php include "modules/home/tab2.php"?>
 					</div>
 					<div class="tab-pane fade" id="messages">
                         <?php include "modules/home/tab3.php";?>
