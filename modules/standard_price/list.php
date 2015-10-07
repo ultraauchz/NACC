@@ -81,8 +81,8 @@
 						<div style="text-align:left;">475,080</div>
 						<div style="text-align:left;">สิงหาคม 2558</div>
 						<div style="text-align:left;">
-							<a href="standard_price?q=form" class="btn btn-sm btn-blue">ดูรายละเอียด</a>							
-                            <a href="standard_price?q=form" class="btn btn-sm btn-info">แก้ไข</a>
+							<a href="standard_price.php?q=form" class="btn btn-sm btn-blue">ดูรายละเอียด</a>							
+                            <a href="standard_price.php?q=form" class="btn btn-sm btn-info">แก้ไข</a>
                             <a href="#" class="btn btn-sm btn-danger">ลบ</a>
 						</div>
 					</div>					
