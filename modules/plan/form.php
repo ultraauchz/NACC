@@ -86,9 +86,11 @@
 						<hr style='margin:20px 0; margin-top:5px;'>
 						<!-- ข้อมูลคู่สัญญา -->
 						
-						<!-- เลขที่สัญญา -->
-						<div class="form-group" style="margin-left:20px;">
-							<h6><b>เลขที่สัญญา</b></h6>
+						<div class="form-group">
+						    <label class="col-sm-3 control-label">เลขที่สัญญา : <span class="text-red">*</span></label>
+						    <div class="col-sm-7">
+						      <input type="text" class="form-control" placeholder="เลขที่สัญญา" id="" name="" />
+						    </div>
 						</div>
 						
 						<div class="form-group">
@@ -124,14 +126,14 @@
 
 						<div class="form-group">
 						    <label class="col-sm-3 control-label">โทรศัพท์ : </label>
-						    <div class="col-sm-3">
+						    <div class="col-sm-5">
 						      <input type="text" class="form-control" placeholder="โทรศัพท์" id="" name="" />
 						    </div>
 						</div>
 						
 						<div class="form-group">
 						    <label class="col-sm-3 control-label">ผู้รับผิดชอบโครงการ : </label>
-						    <div class="col-sm-3">
+						    <div class="col-sm-5">
 						      <input type="text" class="form-control" placeholder="ผู้รับผิดชอบโครงการ" id="" name="" />
 						    </div>
 						</div>

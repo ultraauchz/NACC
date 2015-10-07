@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8" >
 	<style type="text/css">
 		#menu, #menu * {
 			color:#fff;
@@ -47,10 +48,29 @@
 					</div>
 				</div>
 			</div>
-			<div class='col-md-12' style='background:#2F2E60;'>
-				<div class='col-md-10 col-md-offset-1'>
-					<ul id='menu' class="nav navbar-nav navbar-left">
-            			<li><a href="home.php">หน้าแรก</a></li>
+		</div>
+
+		<!-- begin navbar -->
+		<div class="row div_main_menu">
+
+	      <!-- Static navbar -->
+	      <div class="col-md-10 col-md-offset-1 div_main_menu">
+		      <nav class="navbar navbar-default" style='margin-bottom: 0px; div_main_menu'>
+
+		        <div class="container-fluid div_main_menu" style="padding-left: 5px; padding-right: 5px;">
+		          <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		              <span class="sr-only">Toggle navigation</span>
+		              <span class="icon-bar"></span>
+		              <span class="icon-bar"></span>
+		              <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand visible-xs-block" href="#">Menu</a>
+		          </div>
+
+		          <div id="navbar" class="navbar-collapse collapse" style="float: left;">
+		            <ul class="nav navbar-nav">
+		              	<li class="active"><a href="home.php">หน้าแรก</a></li>
             			<li><a href="member.php?q=list">ข้อมูลการสมัครขอใช้บริการ</a></li>
             			<li><a href="plan.php?q=list">ข้อมูลแผนประจำปี</a></li>
             			<li><a href="standard_price.php">ข้อมูล ราคากลาง</a></li>
@@ -86,14 +106,17 @@
                                 <li><a href="#">ตำบล</a></li>
                             </ul>
                         </li>   
-           			</ul>
+		            </ul>
+		          </div><!--/.nav-collapse -->
+		          <ul class="nav navbar-nav navbar-right">
+	              	<li class="text" style="display: inline-block;">เจ้าหน้าที่ดูแลระบบ</li>
+	              	<li class="btn" style="display: inline-block; float: right;"><a href='index.php' class='btn btn-danger'>ออกจากระบบ</a></li>
+	              </ul>
+		        </div><!--/.container-fluid -->
+		      </nav>
+	      </div>
+	      
+	    </div>
+	    <br>
+	    <!-- end navbar -->
 
-
-					<span class='pull-right' style='margin-top:5px; color:#fff;'>
-						<span style='margin-right:20px;'>เจ้าหน้าที่ดูแลระบบ</span>
-						<a href='index.php' class='btn btn-danger'>ออกจากระบบ</a>
-					</span>
-				</div>
-			</div>
-		</div> 
-		<br>
