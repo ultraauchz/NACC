@@ -36,7 +36,7 @@
 						<div style="width:260px">ชื่อคู่สัญญา</div>
 						<div>ที่อยู่</div>
 						<div style="width:160px">เบอร์โทร</div>
-						<div style='width:160px;'>
+						<div style='width:160px;' class="text-center">
 							<a href='contractparty.php?p=view' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
 								<span style='font-size:20px;'>เพิ่ม</span>
 							</a>
@@ -65,9 +65,10 @@
 								echo '<div>'.$item[1].'</div>';
 								echo '<div>'.$item[2].'</div>';
 								echo '<div>'.$item[3].'</div>';
-								echo '<div>';
-									echo '<a href="contractparty.php?p=view&id='.$item[4].'" class="btn btn-sm btn-blue">ดูรายละเอียด</a>';
-									echo '<a href="contractparty.php?p=edit&id='.$item[4].'" class="btn btn-sm btn-info">แก้ไข</a>';
+								echo '<div class="text-center">';
+									echo '<a href="contractparty.php?p=view&id='.$item[4].'" class="btn btn-sm btn-view"></a>';
+									echo '<a href="contractparty.php?p=edit&id='.$item[4].'" class="btn btn-sm btn-edit"></a>';
+									echo '<a href="#" class="btn btn-sm btn-delete"></a>';
 								echo '</div>';
 							echo '</div>';
 						}

@@ -33,6 +33,55 @@
     color: #fff;
 }
 
+.btn-view, .btn-edit, .btn-delete{
+    min-width: 25px !important;
+}
+
+.btn-view:before {
+    display: inline-block;
+    content: "\f0f6";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #163C6D;
+    font-size: 18px;
+    padding-right: 0.5em;
+    top: 10px;
+    left: 0;
+}
+
+.btn-edit:before {
+    display: inline-block;
+    content: "\f044";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #3498db;
+    font-size: 18px;
+    padding-right: 0.5em;
+    top: 10px;
+    left: 0;
+}
+
+.btn-delete:before {
+    display: inline-block;
+    content: "\f1f8";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #AE0000;
+    font-size: 18px;
+    padding-right: 0.5em;
+    top: 10px;
+    left: 0;
+}
+
 .control-label, .checkbox-inline {
 	font-size: 22px;
 }
