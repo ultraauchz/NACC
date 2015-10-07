@@ -234,45 +234,46 @@
 		</div>
 
 		<?php include('template/pagination.php'); ?>
-		
-		<div class='tableLayout list'>
-			<div class='header'>
-				<div class="text-center" style="width:50px;">ลำดับ</div>
-				<div>เลขประจำตัวผู้เสียภาษี/เลขประจำตัวประชาชน</div>
-				<div>ชื่อผู้ประกอบการ</div>
-				<div>ที่อยู่</div>
-				<div>เลือก</div>
-			</div>
+		<div class="table-responsive">
+			<div class='tableLayout list'>
+				<div class='header'>
+					<div class="text-center" style="width:50px;">ลำดับ</div>
+					<div>เลขประจำตัวผู้เสียภาษี/เลขประจำตัวประชาชน</div>
+					<div>ชื่อผู้ประกอบการ</div>
+					<div>ที่อยู่</div>
+					<div>เลือก</div>
+				</div>
 
 
-			<?php 
-				$dataList = array(
-					array('1100701061554', 'ชื่อคู่สัญญา4 นามสมมุติ', 'กทม.', 4),
-					array('1100705648690', 'ชื่อคู่สัญญา3 นามสมมุติ', 'กทม.', 3),
-					array('1100705001221', 'ชื่อคู่สัญญา2 นามสมมุติ', 'นนทบุรี', 2),
-					array('1055801061554', 'ชื่อคู่สัญญา1 นามสมมุติ', 'ปทุมธานี ', 1),
-					array('', '', '', 10),
-					array('', '', '', 9),
-					array('', '', '', 8),
-					array('', '', '', 7),
-					array('', '', '', 6),
-					array('', '', '', 5),
-				);
+				<?php 
+					$dataList = array(
+						array('1100701061554', 'ชื่อคู่สัญญา4 นามสมมุติ', 'กทม.', 4),
+						array('1100705648690', 'ชื่อคู่สัญญา3 นามสมมุติ', 'กทม.', 3),
+						array('1100705001221', 'ชื่อคู่สัญญา2 นามสมมุติ', 'นนทบุรี', 2),
+						array('1055801061554', 'ชื่อคู่สัญญา1 นามสมมุติ', 'ปทุมธานี ', 1),
+						array('', '', '', 10),
+						array('', '', '', 9),
+						array('', '', '', 8),
+						array('', '', '', 7),
+						array('', '', '', 6),
+						array('', '', '', 5),
+					);
 
-				foreach($dataList as $item) {
-					echo '<div>';
-						echo '<div class="text-center">'.((empty($no))?$no = 1:++$no).'</div>';
-						echo '<div>'.$item[0].'</div>';
-						echo '<div>'.$item[1].'</div>';
-						echo '<div>'.$item[2].'</div>';
+					foreach($dataList as $item) {
 						echo '<div>';
-							echo '<button class="btn btn-sm btn-blue btn-select-cp">เลือก</button>';
+							echo '<div class="text-center">'.((empty($no))?$no = 1:++$no).'</div>';
+							echo '<div>'.$item[0].'</div>';
+							echo '<div>'.$item[1].'</div>';
+							echo '<div>'.$item[2].'</div>';
+							echo '<div>';
+								echo '<button class="btn btn-sm btn-blue btn-select-cp">เลือก</button>';
+							echo '</div>';
 						echo '</div>';
-					echo '</div>';
-				}
-			?>
-					
-		</div> <!-- <div class='tableLayout list'> -->
+					}
+				?>
+						
+			</div> <!-- <div class='tableLayout list'> -->
+		</div>
 		
 		<?php include('template/pagination.php'); ?>
 	</div>

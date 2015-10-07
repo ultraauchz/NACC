@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">
 		#menu, #menu * {
 			color:#fff;
@@ -36,6 +38,7 @@
 	?>
 </head>
 <body>
+
 	<div class='container-fluid'>
 		<div class='row'>
 			<div id='sectorHeader' class='col-md-12'>
@@ -49,7 +52,7 @@
 				</div>
 			</div>
 		</div>
-
+	
 		<!-- begin navbar -->
 		<div class="row div_main_menu">
 
@@ -109,8 +112,8 @@
 		            </ul>
 		          </div><!--/.nav-collapse -->
 		          <ul class="nav navbar-nav navbar-right">
-	              	<li class="text" style="display: inline-block;">เจ้าหน้าที่ดูแลระบบ</li>
-	              	<li class="btn" style="display: inline-block; float: right;"><a href='index.php' class='btn btn-danger'>ออกจากระบบ</a></li>
+		          	<li class="btn" style="float: right;"><a href='index.php' class='btn btn-danger'>ออกจากระบบ</a></li>
+	              	<li class="text" style="float: right;">เจ้าหน้าที่ดูแลระบบ</li>
 	              </ul>
 		        </div><!--/.container-fluid -->
 		      </nav>
