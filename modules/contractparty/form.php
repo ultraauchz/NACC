@@ -112,7 +112,7 @@
 										<div class="col-sm-2">ตั้งแต่วันที่ทำสัญญา :</div>
 										<div class="col-sm-2">
 											<div class='input-group' id="div_date_of_issue">
-										      <input type="input" class="form-con form-control datepicker" id="datepicker_s" name="date_start" />
+										      <input type="input" class="form-con form-control datepicker" id="src_date_start" name="src_date_start" />
 										      <span class="input-group-addon">
 						                        <span class="glyphicon glyphicon-calendar"></span>
 						                      </span>
@@ -121,7 +121,7 @@
 					                    <div class="col-sm-2">ถึงวันที่ทำสัญญา :</div>
 					                    <div class="col-sm-2">
 											<div class='input-group' id="div_date_of_issue">
-										      <input type="input" class="form-con form-control datepicker" id="datepicker_e" name="date_end" />
+										      <input type="input" class="form-con form-control datepicker" id="src_date_end" name="src_date_end" />
 										      <span class="input-group-addon">
 						                        <span class="glyphicon glyphicon-calendar"></span>
 						                      </span>
@@ -148,7 +148,7 @@
 									<div>วันที่ทาสัญญา</div>
 									<div>มูลค่าสัญญา</div>
 									<div style='width:160px;' class="text-center">
-										<a href='#div_contract' class='btn modal_fade' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
+										<a href='#div_contract' class='btn modal_fade2' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
 											<span style='font-size:20px;'>เพิ่ม</span>
 										</a>
 									</div>
@@ -180,8 +180,8 @@
 											echo '<div>'.$item[4].'</div>';
 											echo '<div>'.$item[5].'</div>';
 											echo '<div class="text-center">';
-												echo '<a href="#div_contract" class="btn btn-sm btn-view modal_fade" title="ดูรายละเอียด"></a>';
-												echo '<a href="#div_contract" class="btn btn-sm btn-edit modal_fade" title="แก้ไข"></a>';
+												echo '<a href="#div_contract" class="btn btn-sm btn-view modal_fade2" title="ดูรายละเอียด"></a>';
+												echo '<a href="#div_contract" class="btn btn-sm btn-edit modal_fade2" title="แก้ไข"></a>';
 												echo '<a href="#" class="btn btn-sm btn-delete" title="ลบ"></a>';
 											echo '</div>';
 										echo '</div>';
@@ -203,26 +203,30 @@
 	</div>
 </div>
 
-<div style="display:none;">
+<div style="display:none;" class="col-sm-12">
 	<div id="div_contract">
-		<?php include('modules/contract/form.php'); ?>
+		<?php 
+			$action_contract_form = 'include';
+			include('modules/contract/form.php'); 
+		?>
 	</div>
 </div>
 
 <script language='javascript'>
 	$(function(){
-		$('[name=date_start]').on('change', function(){
-			date_start = $('[name=date_start]').val();
-			datepicker_($('[name=date_end]'), $('[name=date_start]').val());
+		$('[name=src_date_start]').on('change', function(){
+			date_start = $('[name=src_date_start]').val();
+			datepicker_($('[name=src_date_end]'), $('[name=src_date_start]').val());
 		});
 		
-		$('[name=date_end]').on('change', function(){
-			date_end = $('[name=date_end]').val();
-			datepicker_($('[name=date_start]'), $('[name=date_start]').val(), $('[name=date_end]').val());
+		$('[name=src_date_end]').on('change', function(){
+			date_end = $('[name=src_date_end]').val();
+			datepicker_($('[name=src_date_start]'), $('[name=src_date_start]').val(), $('[name=src_date_end]').val());
 		});
 
-		$('.btn-select-cp').on('click', function() {
+		$('.btn-close-cbox').on('click', function() {
 			$('#cboxClose').click();
+			return false;
 		});
 	});
 </script>

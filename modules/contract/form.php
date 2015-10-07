@@ -18,9 +18,11 @@
 						    <div class="col-sm-5">
 						      <input type="text" class="form-control" placeholder="เลขประจำตัวผู้เสียภาษี/เลขประจำตัวประชาชน" id="" name="" />
 						    </div>
+						    <?php if (empty($action_contract_form)) { ?>
 						    <div class="col-sm-2">
 						    	<a href="#div_contractparty" class='btn btn-inverse modal_fade'>ค้นหา</a>
 						    </div>
+						    <?php } ?>
 						</div>
 
 						<div class="form-group">
@@ -198,7 +200,7 @@
 
 						<div class="col-sm-12 text-center">
 							<button type="button" class="btn btn-primary" >บันทึก</button>
-							<a href="contract.php" class="btn btn-default">ย้อนกลับ</a>
+							<a href="contract.php" class="btn btn-default <?php echo (!empty($action_contract_form))?'btn-close-cbox':''; ?>">ย้อนกลับ</a>
 						</div>
 
 					</form>
