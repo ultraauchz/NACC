@@ -2,8 +2,7 @@
 	<div class='col-md-12'>
 		<div class='col-md-10 col-md-offset-1'>
 			<div style='display:inline-block; width:100%; min-height:750px; background:#fff; padding:30px;'>
-				<?php echo breadcrumb('ข้อมูลการสมัครขอใช้บริการ เพิ่ม/แก้ไข');?>
-				
+				<h4 style='margin:0;'>ข้อมูลการสมัครขอใช้บริการ เพิ่ม/แก้ไข</h4>
 				<div class="row">
 					<form class="form-horizontal" action="#" method="post" enctype="multipart/form-data">
 
@@ -93,7 +92,7 @@
 
 						<div class="col-sm-12 text-center">
 							<button type="button" class="btn btn-primary" >บันทึก</button>
-							<a href="member.php" class="btn btn-default">ย้อลกลับ</a>
+							<a href="member.php" class="btn btn-default">ย้อนกลับ</a>
 						</div>
 
 					</form>

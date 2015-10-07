@@ -1,4 +1,5 @@
-<h4 style="padding-top:20px;padding-left:20px;"></h4>
+<div style="padding:20px;border-left:1px solid #CCCCCC;border-right:1px solid #CCCCCC;border-bottom:1px solid #CCCCCC;float:left;width:100%">
+<h4>ข้อมูลการลงทะเบียนขอใช้บริการ ที่รอการอนุมัติ</h4>
 <div class='tableLayout list'>
 	<div class='header'>
 		<div class="text-center" style="width:50px;">
@@ -45,4 +46,5 @@
                 <a href="#" class="btn btn-primary">แก้ไข</a>
         </div>
     </div>
+</div>
 </div>
