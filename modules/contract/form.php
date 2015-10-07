@@ -210,6 +210,7 @@
 
 <div style="display:none;">
 	<div id="div_counterparty">
+		<h4>ข้อมูลคู่สัญญา</h4>
 		<div style='padding:20px; padding-top:10px; background:#eee; margin:10px 0; border:solid 1px #aaa; margin-bottom:25px;'>
 			<div style='font-weight:bold;'>ค้นหา</div>
 			<form class="form-horizontal" action="#" method="post">
@@ -232,22 +233,7 @@
 			</form>
 		</div>
 
-		<div class="text-center">
-			<div class="pagination">
-				<div class="pagination_data">มีทั้งหมด  159 รายการ   / 16 หน้า </div>
-				<span class="disabled">« Previous</span>
-				<span class="current">1</span>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">6</a>
-				...
-				<a href="#">15</a>
-				<a href="#">16</a>
-				<a href="#" class="next">Next »</a>
-			</div>
-		</div>
+		<?php include('template/pagination.php'); ?>
 		
 		<div class='tableLayout list'>
 			<div class='header'>
