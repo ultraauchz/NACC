@@ -57,7 +57,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ข้อมูลสัญญา <b class="caret"></b></a>
                             <span class="dropdown-arrow"></span>
                             <ul class="dropdown-menu">                                
-                                <li><a href="#">ข้อมูลคู่สัญญา</a></li>
+                                <li><a href="contractparty.php">ข้อมูลคู่สัญญา</a></li>
                                 <li><a href="contract.php?q=list">ข้อมูลสัญญา</a></li>
                             </ul>
                         </li>                             

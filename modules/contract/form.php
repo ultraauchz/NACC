@@ -19,7 +19,7 @@
 						      <input type="text" class="form-control" placeholder="เลขประจำตัวผู้เสียภาษี/เลขประจำตัวประชาชน" id="" name="" />
 						    </div>
 						    <div class="col-sm-2">
-						    	<a href="#div_counterparty" class='btn btn-inverse modal_fade'>ค้นหา</a>
+						    	<a href="#div_contractparty" class='btn btn-inverse modal_fade'>ค้นหา</a>
 						    </div>
 						</div>
 
@@ -209,7 +209,7 @@
 </div>
 
 <div style="display:none;">
-	<div id="div_counterparty">
+	<div id="div_contractparty">
 		<h4>ข้อมูลคู่สัญญา</h4>
 		<div style='padding:20px; padding-top:10px; background:#eee; margin:10px 0; border:solid 1px #aaa; margin-bottom:25px;'>
 			<div style='font-weight:bold;'>ค้นหา</div>
@@ -273,6 +273,8 @@
 			?>
 					
 		</div> <!-- <div class='tableLayout list'> -->
+		
+		<?php include('template/pagination.php'); ?>
 	</div>
 </div>
 
