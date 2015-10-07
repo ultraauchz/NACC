@@ -61,8 +61,8 @@
                                 <li><a href="contract.php?q=list">ข้อมูลสัญญา</a></li>
                             </ul>
                         </li>                             
-                        <li><a href="blacklist.php?q=list">ข้อมูล Black List</a></li>
-                        <li><a href="blacklist.php?q=list">ข้อมูล ราคากลาง</a></li>          			
+                        <li><a href="blacklist.php?q=list">ข้อมูลตรวจสอบบัญชีรายรับ - รายจ่าย</a></li>
+                        <li><a href="standard_price">ข้อมูล ราคากลาง</a></li>          			
             			<li class="dropdown">
             				<a href="#" class="dropdown-toggle" data-toggle="dropdown">รายงาน <b class="caret"></b></a>
             				<span class="dropdown-arrow"></span>

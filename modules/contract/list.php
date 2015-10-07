@@ -23,7 +23,13 @@
 						<div class="div_index_search col-sm-12">
 							<div class="col-sm-2">ชื่อผู้ประกอบการ : </div>
 							<div class="col-sm-4">
-								<input type='text' placeholder='เลขประจาตัวผู้เสียภาษี' class='form-control' style="display:inline-block;">
+								<input type='text' placeholder='ชื่อผู้ประกอบการ' class='form-control' style="display:inline-block;">
+							</div>
+						</div>
+						<div class="div_index_search col-sm-12">
+							<div class="col-sm-2">ชื่อสัญญา : </div>
+							<div class="col-sm-4">
+								<input type='text' placeholder='ชื่อสัญญา' class='form-control' style="display:inline-block;">
 							</div>
 						</div>
 						<div class="div_index_search col-sm-12">
@@ -58,13 +64,14 @@
 				<div class='tableLayout list'>
 					<div class='header'>
 						<div class="text-center" style="width:50px;">ลำดับ</div>
-						<div style='width:200px;'>เลขที่สัญญา</div>
-						<div>เลขที่คุมสัญญา</div>
-						<div>เลขประจาตัวผู้เสียภาษี</div>
+						<div style='width:160px;'>เลขที่สัญญา</div>
+						<div style='width:160px;'>เลขที่คุมสัญญา</div>
+						<div style='width:160px;'>เลขประจาตัวผู้เสียภาษี</div>
 						<div>ชื่อคู่สัญญา</div>
+						<div>ชื่อสัญญา</div>
 						<div>วันที่ทาสัญญา</div>
 						<div>มูลค่าสัญญา</div>
-						<div style='width:160px;'>
+						<div style='width:160px;' class="text-center">
 							<a href='contract.php?p=view' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
 								<span style='font-size:20px;'>เพิ่ม</span>
 							</a>
@@ -74,10 +81,10 @@
 
 					<?php 
 						$dataList = array(
-							array('2/2557', 'N555000023', '1100701061554', 'ชื่อคู่สัญญา4 นามสมมุติ', '1/10/2557', '2,000,000,000.00', 4),
-							array('1/2557', 'N555000022', '1100705648690', 'ชื่อคู่สัญญา3 นามสมมุติ', '15/05/2557', '5,000,000.00', 3),
-							array('2/2556', 'N554000023', '1100705001221', 'ชื่อคู่สัญญา2 นามสมมุติ', '25/02/2556', '6,580,100.00', 2),
-							array('1/2556', 'N554000022', '1055801061554', 'ชื่อคู่สัญญา1 นามสมมุติ', '30/01/2256 ', '50,000.00', 1),
+							array('2/2557', 'N555000023', '1100701061554', 'ชื่อคู่สัญญา4 นามสมมุติ', '1/10/2557', '2,000,000,000.00', 4, 'ชื่อสัญญา4'),
+							array('1/2557', 'N555000022', '1100705648690', 'ชื่อคู่สัญญา3 นามสมมุติ', '15/05/2557', '5,000,000.00', 3, 'ชื่อสัญญา3'),
+							array('2/2556', 'N554000023', '1100705001221', 'ชื่อคู่สัญญา2 นามสมมุติ', '25/02/2556', '6,580,100.00', 2, 'ชื่อสัญญา2'),
+							array('1/2556', 'N554000022', '1055801061554', 'ชื่อคู่สัญญา1 นามสมมุติ', '30/01/2256 ', '50,000.00', 1, 'ชื่อสัญญา1'),
 							array('', '', '', '', '', '', 10),
 							array('', '', '', '', '', '', 9),
 							array('', '', '', '', '', '', 8),
@@ -93,11 +100,13 @@
 								echo '<div>'.$item[1].'</div>';
 								echo '<div>'.$item[2].'</div>';
 								echo '<div>'.$item[3].'</div>';
+								echo '<div>'.$item[7].'</div>';
 								echo '<div>'.$item[4].'</div>';
 								echo '<div>'.$item[5].'</div>';
-								echo '<div>';
-									echo '<a href="contract.php?p=view&id='.$item[6].'" class="btn btn-sm btn-blue">ดูรายละเอียด</a>';
-									echo '<a href="contract.php?p=edit&id='.$item[6].'" class="btn btn-sm btn-info">แก้ไข</a>';
+								echo '<div class="text-center">';
+									echo '<a href="contract.php?p=view&id='.$item[6].'" class="btn btn-sm btn-view"></a>';
+									echo '<a href="contract.php?p=edit&id='.$item[6].'" class="btn btn-sm btn-edit"></a>';
+									echo '<a href="#" class="btn btn-sm btn-delete"></a>';
 								echo '</div>';
 							echo '</div>';
 						}
