@@ -38,7 +38,7 @@
 							<hr>
 								
 							<div style='display:inline-block; text-align:left;'>
-								<div>หน่วยงาน: </div>
+								<div>สถานะ: </div>
 								<div>
 									<select class='form-control' style="display:inline-block; width:auto;">
 										<option>--เลือกสถานะ--</option>
