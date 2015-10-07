@@ -207,7 +207,7 @@
 	<div id="div_contract">
 		<?php 
 			$action_contract_form = 'include';
-			include('modules/contract/form.php'); 
+			include('modules/contract/include_form.php'); 
 		?>
 	</div>
 </div>
