@@ -22,7 +22,7 @@
 						</div>
 						<div class="div_index_search col-sm-12">
 							<div class="col-sm-2">
-								ชื่อรายการ :
+								ชื่อโครงการ :
 							</div>
 							<div class="col-sm-3">
 								<input type='text' placeholder='ชื่อรายการ' class='form-control' style="display:inline-block; width:300px;">
@@ -77,7 +77,7 @@
 					<div class="tbody">
 						<div style="text-align:center;">1</div>
 						<div style="text-align:left;">ศูนย์เทคโนโลยีสารสนเทศและการและการสื่อสาร สำนักงานปลัดกระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์</div>
-						<div style="text-align:left;">การจ้างบำรุงรักษาโปรแกรมประยุกต์ระบบงานบริการทางสังคม ของ สป.พม. ประจำปีงบประมาณ 2559</div>
+						<div style="text-align:left;">การจ้างบำรุงรักษาโปรแกรมประยุกต์ระบบงานบริการทางสังคม ของ สป.พม. ประจำปีงบประมาณ ๒๕๕๙</div>
 						<div style="text-align:left;">475,080</div>
 						<div style="text-align:left;">สิงหาคม 2558</div>
 						<div style="text-align:left;">
