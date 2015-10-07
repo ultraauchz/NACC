@@ -52,16 +52,40 @@
 					<ul id='menu' class="nav navbar-nav navbar-left">
             			<li><a href="home.php">หน้าแรก</a></li>
             			<li><a href="member.php?q=list">ข้อมูลการสมัครขอใช้บริการ</a></li>
-            			<li><a href="contract.php?q=list">ข้อมูลสัญญา</a></li>
+            			<li><a href="plan.php?q=list">ข้อมูลแผนประจำปี</a></li>
+            			<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ข้อมูลสัญญา <b class="caret"></b></a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">                                
+                                <li><a href="#">ข้อมูลคู่สัญญา</a></li>
+                                <li><a href="contract.php?q=list">ข้อมูลสัญญา</a></li>
+                            </ul>
+                        </li>                             
+                        <li><a href="blacklist.php?q=list">ข้อมูล Black List</a></li>
+                        <li><a href="blacklist.php?q=list">ข้อมูล ราคากลาง</a></li>          			
             			<li class="dropdown">
             				<a href="#" class="dropdown-toggle" data-toggle="dropdown">รายงาน <b class="caret"></b></a>
             				<span class="dropdown-arrow"></span>
             				<ul class="dropdown-menu">
-            					<li><a href="#">รายงาน 1</a></li>
-            					<li><a href="#">รายงาน 2</a></li>
-            					<li><a href="#">รายงาน 3</a></li>
+            					<li><a href="#">รายงานสถานะคู่สัญญา</a></li>
+            					<li><a href="#">รายงานราคากลาง</a></li>
+            					<li><a href="#">ประวัติการใช้งาน</a></li>
             				</ul>
             			</li>	
+            			<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ตั้งค่าระบบ <b class="caret"></b></a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">กลุ่มผู้ใช้ และการกำหนดสิทธิ์การใช้งาน</a></li>
+                                <li><a href="#">ผู้ใช้</a></li>
+                                <li><a href="#">ประเภทหน่วยงาน</a></li>
+                                <li><a href="#">หน่วยงาน</a></li>
+                                <li><a href="#">ประเทศ</a></li>
+                                <li><a href="#">จังหวัด</a></li>
+                                <li><a href="#">อำเภอ</a></li>
+                                <li><a href="#">ตำบล</a></li>
+                            </ul>
+                        </li>   
            			</ul>
 
 

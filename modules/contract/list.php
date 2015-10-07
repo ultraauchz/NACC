@@ -63,7 +63,7 @@
 						<div>วันที่ทาสัญญา</div>
 						<div>มูลค่าสัญญา</div>
 						<div style='width:160px;'>
-							<a href='pComplain.php' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
+							<a href='contract.php?p=view' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'>
 								<span style='font-size:20px;'>เพิ่ม</span>
 							</a>
 						</div>
