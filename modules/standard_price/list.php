@@ -14,33 +14,10 @@
 					<form class="form-horizontal" action="#" method="post">
 						<div class="col-sm-12">
 							<div class="col-sm-2">
-								ประเภทสินทรัพย์ :
+								หน่วยงานเจ้าของโครงการ :
 							</div>
 							<div class="col-sm-2">
-								<select name="" id="" class="form-control">
-									<option selected="selected" value="">-- แสดงทั้งหมด --</option>
-									<option value="1">ที่ดิน</option>
-									<option value="2">อาคารพักอาศัย</option>
-									<option value="3">อาคารสำนักงาน</option>
-									<option value="4">อาคารเพื่อประโยชน์อื่น</option>
-									<option value="5">สิ่งปลูกสร้าง</option>
-									<option value="6">ครุภัณฑ์สำนักงาน</option>
-									<option value="7">ครุภัณฑ์ยานพาหนะ</option>
-									<option value="8">ครุภัณฑ์ไฟฟ้าและวิทยุ</option>
-									<option value="9">ครุภัณฑ์โฆษณาและเผยแพร่</option>
-									<option value="10">ครุภัณฑ์การเกษตร</option>
-									<option value="11">ครุภัณฑ์โรงงาน</option>
-									<option value="12">ครุภัณฑ์ก่อสร้าง</option>
-									<option value="13">ครุภัณฑ์สำรวจ</option>
-									<option value="14">ครุภัณฑ์วิทยาศาสตร์</option>
-									<option value="15">ครุภัณฑ์คอมพิวเตอร์</option>
-									<option value="16">ครุภัณฑ์การศึกษา</option>
-									<option value="17">ครุภัณฑ์งานบ้านงานครัว</option>
-									<option value="18">ครุภัณฑ์กีฬา</option>
-									<option value="19">ครุภัณฑ์ดนตรี</option>
-									<option value="20">ครุภัณฑ์สนาม</option>
-
-								</select>
+								<input type='text' placeholder='หน่วยงานเจ้าของโครงการ' class='form-control' style="display:inline-block; width:300px;">
 							</div>
 						</div>
 						<div class="div_index_search col-sm-12">
@@ -81,25 +58,32 @@
 						<div class="text-center" style="width:50px;">
 							ลำดับ
 						</div>
-						<div style='width:200px;'>
-							ประเภทสินทรัพย์
+						<div>
+							หน่วยงานเจ้าของโครงการ
 						</div>
 						<div>
-							รายการ
+							โครงการ
 						</div>
 						<div>
-							ราคา
+							วงเงินงบประมาณ
 						</div>
+						<div>
+                            วันที่กำหนดราคากลาง
+                        </div>
 						<div style='width:160px;'>
+						    <a href='member.php?q=form' class='btn' style='background:#0D7D21; color:#fff; padding:5px 10px; display:inline-block; font-family:THSarabunNew;'> <span style='font-size:20px;'>เพิ่ม</span> </a>
 						</div>
 					</div>
 					<div class="tbody">
 						<div style="text-align:center;">1</div>
-						<div style="text-align:left;">ครุภัณฑ์คอมพิวเตอร์</div>
-						<div style="text-align:left;">เครื่องคอมพิวเตอร์แม่ข่าย แบบที่ 1</div>
-						<div style="text-align:left;">120,000</div>
+						<div style="text-align:left;">ศูนย์เทคโนโลยีสารสนเทศและการและการสื่อสาร สำนักงานปลัดกระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์</div>
+						<div style="text-align:left;">การจ้างบำรุงรักษาโปรแกรมประยุกต์ระบบงานบริการทางสังคม ของ สป.พม. ประจำปีงบประมาณ 2559</div>
+						<div style="text-align:left;">475,080</div>
+						<div style="text-align:left;">สิงหาคม 2558</div>
 						<div style="text-align:left;">
-							<a href="standard_price?q=form" class="btn btn-sm btn-blue">ดูรายละเอียด</a>
+							<a href="standard_price?q=form" class="btn btn-sm btn-blue">ดูรายละเอียด</a>							
+                            <a href="standard_price?q=form" class="btn btn-sm btn-info">แก้ไข</a>
+                            <a href="#" class="btn btn-sm btn-danger">ลบ</a>
 						</div>
 					</div>					
 				</div>
