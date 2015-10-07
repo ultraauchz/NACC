@@ -198,7 +198,7 @@
 
 						<div class="col-sm-12 text-center">
 							<button type="button" class="btn btn-primary" >บันทึก</button>
-							<a href="contract.php" class="btn btn-default">ย้อลกลับ</a>
+							<a href="contract.php" class="btn btn-default">ย้อนกลับ</a>
 						</div>
 
 					</form>
