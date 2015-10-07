@@ -2,15 +2,47 @@
 	<div class='col-md-12'>
 		<div class='col-md-10 col-md-offset-1'>
 			<div style='display:inline-block; width:100%; min-height:750px; background:#fff; padding:30px;'>
-				<h4 style='margin:0;'>ข้อมูลการสมัครขอใช้บริการ</h4>
-				<div style='color:#000;'>
-					นายทดสอบ รักชาติ  (เจ้าหน้าที่ดูแลระบบ)
-				</div>
+				<h4 style='margin:0;'>ข้อมูลแผนประจำปี</h4>
+				<div style='color:#aaa;'>เจ้าหน้าที่ดูแลระบบ</div>
 				<hr style='margin:20px 0; margin-top:5px;'>
 				<div style='padding:20px; padding-top:10px; background:#eee; margin:10px 0; border:solid 1px #aaa; margin-bottom:25px;'>
 					<div style='font-weight:bold;'>
 						ค้นหา
 					</div>
+					<form class="form-horizontal" action="#" method="post">
+						<div class="div_index_search col-sm-12">
+							<div class="col-sm-2">
+								หน่วยงาน :
+							</div>
+							<div class="col-sm-3">
+								<select class="form-control">
+									<option value="">หน่วยงานราชการ</option>
+									<option value="">คู่สัญญาภายในประเทศ</option>
+									<option value="">คู่สัญญาต่างประเทศ</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="div_index_search col-sm-12">
+							<div class="col-sm-2">
+								ปีงบประมาณ :
+							</div>
+							<div class="col-sm-3">
+								<select class="form-control">
+									<option value="">2558</option>
+									<option value="">2557</option>
+									<option value="">2556</option>
+									<option value="">2555</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="div_btn_search">
+							<button type="button" class='btn btn-inverse'>
+								ค้นหา
+							</button>
+						</div>
+					</form>
 				</div>
 				
 				<div class="tree well">
@@ -19,24 +51,24 @@
 				            <span><i class="icon-folder-open"></i> ยุทธศาสตร์</span>
 				            <ul>
 				                <li>
-				                	<span><i class="icon-minus-sign"></i> ในแผน</span> <a href="">+ เพิ่มโครงการ</a>
+				                	<span><i class="icon-minus-sign"></i> ในแผน</span> <a href="plan.php?q=form">+ เพิ่มโครงการ</a>
 				                    <ul>
 				                        <li>
-					                        <span><i class="icon-leaf"></i> โครงการ</span> <a href="">Goes somewhere</a>
+					                        <span><i class="icon-leaf"></i> โครงการ</span> <a href="" class="btn btn-sm btn-edit" title="แก้ไข"></a> <a href="#" class="btn btn-sm btn-delete" title="ลบ"></a>
 				                        </li>
 				                        <li>
-					                        <span><i class="icon-leaf"></i> โครงการ</span> <a href="">Goes somewhere</a>
+					                        <span><i class="icon-leaf"></i> โครงการ</span> <a href="" class="btn btn-sm btn-edit" title="แก้ไข"></a> <a href="#" class="btn btn-sm btn-delete" title="ลบ"></a>
 				                        </li>
 				                    </ul>
 				                </li>
 				                <li>
-				                	<span><i class="icon-minus-sign"></i> นอกแผน</span> <a href="">+ เพิ่มโครงการ</a>
+				                	<span><i class="icon-minus-sign"></i> นอกแผน</span> <a href="plan.php?q=form">+ เพิ่มโครงการ</a>
 				                    <ul>
 				                        <li>
-					                        <span><i class="icon-leaf"></i> โครงการ</span> <a href="">Goes somewhere</a>
+					                        <span><i class="icon-leaf"></i> โครงการ</span> <a href="" class="btn btn-sm btn-edit" title="แก้ไข"></a> <a href="#" class="btn btn-sm btn-delete" title="ลบ"></a>
 				                        </li>
 				                        <li>
-					                        <span><i class="icon-leaf"></i> โครงการ</span> <a href="">Goes somewhere</a>
+					                        <span><i class="icon-leaf"></i> โครงการ</span> <a href="" class="btn btn-sm btn-edit" title="แก้ไข"></a> <a href="#" class="btn btn-sm btn-delete" title="ลบ"></a>
 				                        </li>
 				                        <!-- <li>
 				                        	<span><i class="icon-minus-sign"></i> Grand Child</span> <a href="">Goes somewhere</a>
